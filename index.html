@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Netpoleon </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Netpoleon: Next-generation cybersecurity and network solutions, delivered with expertise and innovation." />
+  <link rel="icon" href="/favicon.ico" />
+
+  <!-- TailwindCSS CDN for utility styles -->
+  <script src="https://cdn.tailwindcss.com"></script>
+   <script src="scripts.js" defer></script>
+  
+  <!-- GSAP and ScrollTrigger CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <link rel="stylesheet" href="styles.css" />
+  <body class="min-h-screen flex flex-col items-center pt-20">
+
+  <header class="sticky top-0 w-full bg-white z-10 shadow-sm border-b border-gray-200">
+    <div class="max-w-6xl mx-auto flex items-center h-20 px-6">
+      <!-- Logo Left -->
+      <div class="text-2xl font-extrabold tracking-tight text-gray-900 flex-1 select-none">
+        <span class="font-black mr-1">Netpoleons</span>ANZ
+      </div>
+      <!-- Navigation Right -->
+      <nav class="flex items-center gap-4">
+        <a href="#" class="text-gray-600 font-medium hover:text-black transition">Docs</a>
+        <a href="#" class="text-gray-600 font-medium hover:text-black transition">Blog</a>
+        <!-- Region Menu Button (Top Right) -->
+        <div class="relative">
+          <button
+            id="region-btn"
+            class="rounded-full border border-gray-300 hover:border-gray-400 transition bg-white text-gray-800 px-5 py-2.5 font-semibold text-base shadow-sm flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-black group"
+            aria-haspopup="menu"
+            aria-expanded="false"
+            aria-controls="region-menu"
+          >
+            <svg class="inline-block h-5 w-5 text-gray-500 group-hover:text-gray-900 transition" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
+            Regions
+          </button>
+          <!-- Flyout Region Menu -->
+          <div
+            id="region-menu"
+            class="region-menu-fade absolute right-0 mt-2 min-w-[180px] bg-white rounded-xl py-2 shadow-2xl border border-gray-200 ring-1 ring-black/5 z-50"
+            aria-hidden="true"
+            role="menu"
+          >
+            <a href="/apac" class="block px-5 py-2 text-gray-800 hover:bg-gray-50 rounded-md text-base font-medium transition" role="menuitem">
+              🌏 Asia Pacific (APAC)
+            </a>
+            <a href="/emea" class="block px-5 py-2 text-gray-800 hover:bg-gray-50 rounded-md text-base font-medium transition" role="menuitem">
+              🌍 Europe/Middle East/Africa (EMEA)
+            </a>
+            <a href="/americas" class="block px-5 py-2 text-gray-800 hover:bg-gray-50 rounded-md text-base font-medium transition" role="menuitem">
+              🌎 Americas
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="flex flex-col items-center justify-center w-full max-w-screen-xl px-6 pt-16 pb-20">
+
+    <h1 class="text-5xl font-extrabold text-gray-900 mb-4 tracking-tight text-center max-w-4xl">
+      Our Solutions
+    </h1>
+    <!-- trafter "Our Solutions" section ends -->
+<div class="mt-12 space-y-6 bg-white py-6">
+  <!-- Marquee Row 1 -->
+  <div class="relative overflow-hidden group h-28">
+    <div class="marquee flex absolute left-0 gap-10 will-change-transform group-hover:[animation-play-state:paused]">
+      <img src="assets/img2.png" class="media-item" />
+      <video autoplay muted loop playsinline class="media-item">
+        <source src="your-video.mp4" type="video/mp4" />
+      </video>
+      <!-- Duplicate for seamless scroll -->
+      <img src="assets/img1.png" class="media-item" />
+      <video autoplay muted loop playsinline class="media-item">
+        <source src="your-video.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </div>
+
+    <p class="text-lg text-gray-600 mb-16 text-center max-w-3xl">
+      Next-generation cybersecurity and network solutions, delivered with expertise and innovation.
+    </p>
+
+    <!-- Light Background Scroll-Driven Animation Section with Images -->
+    <section class="light-scroll-section" aria-label="Key Features and Benefits">
+      <article class="light-scroll-item" tabindex="0" data-animate="fade-up">
+        <img src="assets/transform.jpg" alt="Cybersecurity technology illustration" loading="lazy" />
+        <div class="light-scroll-text">
+          <h3>Transform Your Cybersecurity</h3>
+          <p>Leverage advanced adaptive technologies to secure your digital assets effortlessly.</p>
+        </div>
+      </article>
+      <article class="light-scroll-item" tabindex="0" data-animate="slide-left">
+        <img src="assets/seamless.gif" alt="Integration illustration showing connected systems" loading="lazy" />
+        <div class="light-scroll-text">
+          <h3>Seamless Integration</h3>
+          <p>Plug our solutions directly into your existing infrastructure with minimal disruption.</p>
+        </div>
+      </article>
+      <article class="light-scroll-item" tabindex="0" data-animate="slide-right">
+        <img src="assets/leader.jpg" alt="Trusted by industry leaders illustration" loading="lazy" />
+        <div class="light-scroll-text">
+          <h3>Trusted by Industry Leaders</h3>
+          <p>Our clients span Fortune 500 companies and startups alike, proving our solutions’ reliability.</p>
+        </div>
+      </article>
+      <article class="light-scroll-item" tabindex="0" data-animate="scale-in">
+        <img src="assets/customer.jpg" alt="Dedicated support team illustration" loading="lazy" />
+        <div class="light-scroll-text">
+          <h3>Dedicated Support</h3>
+          <p>Our expert team provides 24/7 hands-on support to keep your systems running smoothly.</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- Existing Scroll-Driven Animation Section -->
+    <section class="scroll-section" aria-label="Why Choose Netpoleon?">
+      <article class="scroll-item" data-animation="fade-up" tabindex="0">
+        <h3>Why Choose Netpoleon?</h3>
+        <p>We provide cutting-edge cybersecurity solutions tailored to protect your business from evolving threats.</p>
+      </article>
+      <article class="scroll-item" data-animation="slide-left" tabindex="0">
+        <h3>Global Expertise</h3>
+        <p>With offices across the world, our team brings localized knowledge with a global perspective.</p>
+      </article>
+      <article class="scroll-item" data-animation="slide-right" tabindex="0">
+        <h3>24/7 Support</h3>
+        <p>Our dedicated support team is available around the clock to ensure your systems are always secure.</p>
+      </article>
+      <article class="scroll-item" data-animation="scale-in" tabindex="0">
+        <h3>Innovative Technology</h3>
+        <p>We leverage the latest advancements in AI and machine learning to stay ahead of cyber threats.</p>
+      </article>
+    </section>
+
+    <!-- Card Grid -->
+    <div class="card-grid w-full max-w-5xl mb-8">
+      <!-- Card 1 -->
+      <div class="elegant-card w-full h-auto flex flex-col items-center justify-center px-8 py-10 group shadow focus:outline-none" tabindex="0" aria-label="Elegant 3D Hover Card">
+        <div class="card-light-spot"></div>
+        <div class="elegant-card-content flex flex-col items-center">
+          <svg width="40" height="40" fill="none" class="mb-6" stroke="currentColor" stroke-width="2" viewBox="0 0 48 48" aria-hidden="true">
+            <rect x="5" y="12" width="38" height="24" rx="4.5" stroke="#ff6a00" fill="none"/>
+            <path d="M5 19h38" stroke="#ff6a00" stroke-width="1.5"/>
+            <circle cx="14" cy="17" r="1" fill="#ff6a00"/>
+            <circle cx="19" cy="17" r="1" fill="#ff6a00"/>
+          </svg>
+          <h2 class="text-2xl font-semibold mb-1 text-orange-600">Threat Intelligence</h2>
+          <p class="text-base text-center text-gray-600">AI-powered monitoring to instantly identify and neutralize threats.</p>
+          <button class="show-more-btn mt-4 px-4 py-1.5 rounded-full text-sm font-medium focus:outline-none focus:ring-2 focus:ring-orange-500 transition">
+            Show more
+          </button>
+          <div class="card-extra w-full text-sm text-left">
+            <ul class="list-disc pl-5 mt-2 text-gray-500">
+              <li>Instant alerts for suspicious activity</li>
+              <li>Customizable detection rules</li>
+              <li>Seamless integration with your workflow</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="elegant-card middle w-full h-auto flex flex-col items-center justify-center px-8 py-10 group shadow focus:outline-none" tabindex="0" aria-label="Elegant 3D Hover Card">
+        <div class="card-light-spot"></div>
+        <div class="elegant-card-content flex flex-col items-center">
+          <svg width="48" height="48" fill="none" class="mb-6 icon-anim" stroke="currentColor" stroke-width="2" viewBox="0 0 48 48" aria-hidden="true">
+            <circle cx="24" cy="24" r="18" class="icon-accent" stroke-width="2.5" fill="none"/>
+            <path d="M24 14v10l7 7" stroke="#ff6a00" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <h2 class="text-2xl font-semibold mb-1 text-orange-600">End-to-End Encryption</h2>
+          <p class="text-base text-center text-gray-600">All your data is protected with military-grade encryption, always.</p>
+          <button class="show-more-btn mt-4 px-4 py-1.5 rounded-full text-sm font-medium focus:outline-none focus:ring-2 focus:ring-orange-500 transition">
+            Show more
+          </button>
+          <div class="card-extra w-full text-sm text-left">
+            <ul class="list-disc pl-5 mt-2 text-gray-500">
+              <li>Zero-knowledge architecture</li>
+              <li>Encrypted backups and transfers</li>
+              <li>Compliance with global standards</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="elegant-card w-full h-auto flex flex-col items-center justify-center px-8 py-10 group shadow focus:outline-none" tabindex="0" aria-label="Elegant 3D Hover Card">
+        <div class="card-light-spot"></div>
+        <div class="elegant-card-content flex flex-col items-center">
+          <svg width="40" height="40" fill="none" class="mb-6" stroke="currentColor" stroke-width="2" viewBox="0 0 48 48" aria-hidden="true">
+            <rect x="10" y="14" width="28" height="20" rx="4.5" stroke="#ff6a00" fill="none"/>
+            <path d="M24 18v12" stroke="#ff6a00" stroke-width="1.5"/>
+            <circle cx="24" cy="24" r="2" fill="#ff6a00"/>
+          </svg>
+          <h2 class="text-2xl font-semibold mb-1 text-orange-600">Managed Security</h2>
+          <p class="text-base text-center text-gray-600">Our experts are always on watch, so you can focus on your business.</p>
+          <button class="show-more-btn mt-4 px-4 py-1.5 rounded-full text-sm font-medium focus:outline-none focus:ring-2 focus:ring-orange-500 transition">
+            Show more
+          </button>
+          <div class="card-extra w-full text-sm text-left">
+            <ul class="list-disc pl-5 mt-2 text-gray-500">
+              <li>Instant response to incidents</li>
+              <li>Proactive threat hunting</li>
+              <li>Personalized security reports</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <span class="text-gray-400 text-sm">Hover or tap a card to interact</span>
+
+    <!-- Animated Metrics Section -->
+    <section class="metrics-section" id="metrics" aria-label="Company Metrics">
+  <div class="metric">
+    <!-- Clock Icon -->
+    <svg class="mx-auto mb-2" width="36" height="36" fill="none" stroke="#ff6a00" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+      <circle cx="12" cy="12" r="10" stroke="#ff6a00" stroke-width="2"/>
+      <path d="M12 6v6l4 2" stroke="#ff6a00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <div class="metric-number" data-target="99.99">0</div>
+    <div class="metric-label">Uptime (%)</div>
+  </div>
+  <div class="metric">
+    <!-- Shield Icon -->
+    <svg class="mx-auto mb-2" width="36" height="36" fill="none" stroke="#ff6a00" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 3l8 4v5c0 5.25-3.5 10-8 12-4.5-2-8-6.75-8-12V7l8-4z" stroke="#ff6a00" stroke-width="2" fill="none"/>
+    </svg>
+    <div class="metric-number" data-target="1200">0</div>
+    <div class="metric-label">Clients Protected</div>
+  </div>
+  <div class="metric">
+    <!-- Globe Icon -->
+    <svg class="mx-auto mb-2" width="36" height="36" fill="none" stroke="#ff6a00" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+      <circle cx="12" cy="12" r="10" stroke="#ff6a00" stroke-width="2"/>
+      <ellipse cx="12" cy="12" rx="6" ry="10" stroke="#ff6a00" stroke-width="2"/>
+      <path d="M2 12h20" stroke="#ff6a00" stroke-width="2"/>
+    </svg>
+    <div class="metric-number" data-target="24">0</div>
+    <div class="metric-label">Countries Served</div>
+  </div>
+  <div class="metric">
+    <!-- Shield Check Icon -->
+    <svg class="mx-auto mb-2" width="36" height="36" fill="none" stroke="#ff6a00" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 3l8 4v5c0 5.25-3.5 10-8 12-4.5-2-8-6.75-8-12V7l8-4z" stroke="#ff6a00" stroke-width="2" fill="none"/>
+      <path d="M9 12l2 2 4-4" stroke="#ff6a00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <div class="metric-number" data-target="5000">0</div>
+    <div class="metric-label">Threats Blocked/Day</div>
+  </div>
+</section>
+
+  </main>
+  <footer>
+    &copy; 2024 Netpoleon. All rights reserved.
+  </footer>
+</body>
+</html>
