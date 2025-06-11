@@ -10,12 +10,17 @@
   <!-- TailwindCSS CDN for utility styles -->
   <script src="https://cdn.tailwindcss.com"></script>
    <script src="scripts.js" defer></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   
   <!-- GSAP and ScrollTrigger CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
   <link rel="stylesheet" href="styles.css" />
+
+  <link rel="stylesheet"href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
   <body class="min-h-screen flex flex-col items-center pt-20">
 
   <header class="sticky top-0 w-full bg-white z-10 shadow-sm border-b border-gray-200">
@@ -60,6 +65,22 @@
         </div>
       </nav>
     </div>
+    <style>
+      .map-wrapper {
+        height: 300px;
+        width: 100%;
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      }
+
+      .leaflet-container {
+        position: relative;
+        z-index: 1;
+        height: 100% ;
+        width: 100% ;
+      }
+    </style>
   </header>
 
   <main class="flex flex-col items-center justify-center w-full max-w-screen-xl px-6 pt-16 pb-20">
@@ -213,6 +234,46 @@
       </div>
     </div>
     <span class="text-gray-400 text-sm">Hover or tap a card to interact</span>
+    <section id="locations-section" class="mt-24 px-4 sm:px-8"> 
+     <div class="bg-white text-gray-800">
+    <section class="mt-24 px-4 sm:px-8">
+      <div class="max-w-7xl mx-auto">
+        <h3 class="text-4xl font-extrabold text-center mb-12 text-[#006F4E]">
+          Our Locations
+        </h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <!-- Location Block -->
+          <div class="text-center">
+            <h4 class="text-lg font-semibold text-[#006F4E] mb-3 uppercase">
+              Melbourne
+            </h4>
+            <div class="map-wrapper"><div id="map-melbourne"></div></div>
+          </div>
+
+          <div class="text-center">
+            <h4 class="text-lg font-semibold text-[#006F4E] mb-3 uppercase">
+              Sydney
+            </h4>
+            <div class="map-wrapper"><div id="map-sydney"></div></div>
+          </div>
+
+          <div class="text-center">
+            <h4 class="text-lg font-semibold text-[#006F4E] mb-3 uppercase">
+              Singapore
+            </h4>
+            <div class="map-wrapper"><div id="map-singapore"></div></div>
+          </div>
+
+          <div class="text-center">
+            <h4 class="text-lg font-semibold text-[#006F4E] mb-3 uppercase">
+              Malaysia
+            </h4>
+            <div class="map-wrapper"><div id="map-malaysia"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Animated Metrics Section -->
     <section class="metrics-section" id="metrics" aria-label="Company Metrics">
@@ -258,5 +319,52 @@
   <footer>
     &copy; 2024 Netpoleon. All rights reserved.
   </footer>
+  <script>
+
+     // Navbar/location elements
+  const header = document.querySelector('header');
+  const locationsSection = document.querySelector('section.mt-24');
+  // Observer options
+  const observerOptions = {
+    root: null, // viewport
+    threshold: 0.1 // triggers when at least 10% visible
+  };
+  function setHeaderBehind(entries) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        header.classList.add('header-behind');
+      } else {
+        header.classList.remove('header-behind');
+      }
+    });
+  }
+  if (header && locationsSection) {
+    const observer = new IntersectionObserver(setHeaderBehind, observerOptions);
+    observer.observe(locationsSection);
+  }
+      const locations = [
+        {
+          id: "map-melbourne",
+          coords: [-37.8142, 144.9631],
+          name: "Melbourne",
+        },
+        { id: "map-sydney", coords: [-33.8688, 151.2093], name: "Sydney" },
+        { id: "map-singapore", coords: [1.3521, 103.8198], name: "Singapore" },
+        { id: "map-malaysia", coords: [3.139, 101.6869], name: "Malaysia" },
+      ];
+
+      locations.forEach((loc) => {
+        const map = L.map(loc.id, { scrollWheelZoom: false }).setView(
+          loc.coords,
+          13
+        );
+
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+          attribution: "&copy; OpenStreetMap contributors",
+        }).addTo(map);
+
+        L.marker(loc.coords).addTo(map).bindPopup(loc.name);
+      });
+    </script>
 </body>
 </html>

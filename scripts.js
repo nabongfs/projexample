@@ -183,6 +183,16 @@ document.querySelectorAll('.show-more-btn').forEach(btn => {
   });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const locations = [
+    { id: "map-melbourne", coords: [-37.8142, 144.9631], name: "Melbourne" },
+    { id: "map-sydney", coords: [-33.8688, 151.2093], name: "Sydney" },
+    { id: "map-singapore", coords: [1.3521, 103.8198], name: "Singapore" },
+    { id: "map-malaysia", coords: [3.139, 101.6869], name: "Malaysia" }
+  ];
+});
+
+
 // Animated Metrics Section
 function animateMetricNumber(el, target, decimals = 0, duration = 2) {
   gsap.fromTo(el, 
@@ -223,3 +233,5 @@ window.addEventListener('scroll', () => {
     header.classList.remove('scrolled');
   }
 });
+
+

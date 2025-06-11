@@ -6,6 +6,9 @@
     transform: translateX(-50%);
   }
 }
+.header-behind {
+  z-index: 1000;
+}
 .region-menu-fade {
       transition: opacity 0.2s cubic-bezier(.4,0,.2,1), transform 0.2s cubic-bezier(.4,0,.2,1);
     }
@@ -484,6 +487,7 @@ a:focus-visible {
 button:focus-visible {
   outline-offset: 6px;
 }
+
 /* Metrics section */
 .metrics-section {
   width: 100%;
